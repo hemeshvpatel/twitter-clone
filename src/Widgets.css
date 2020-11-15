@@ -15,6 +15,7 @@
 .widgets__input > input {
   border: none;
   background-color: var(--twitter-background);
+  font-size: 16px;
 }
 
 .widgets__searchIcon {
