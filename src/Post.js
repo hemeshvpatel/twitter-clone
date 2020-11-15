@@ -13,20 +13,20 @@ function Post({ displayName, username, verified, timestamp, text, image, avatar 
     return (
         <div className="post">
             <div className="post__avatar">
-                <Avatar alt="Dev" src="http://cliparts101.com/files/367/63BA654AECB7FD26A32D08915C923030/avatar_nick.png" />
+                <Avatar alt="Dev" src={avatar} />
             </div>
             <div className="post__body">
                 <div className="post__header">
                     <div className="post__headerText">
                         <h3>
-                            Twitter Guest <span className="post__headerSpecial"><VerifiedUserIcon className="post__badge" />@twitterguest</span>
+                            {displayName} <span className="post__headerSpecial">{verified && <VerifiedUserIcon className="post__badge" />}@{username}</span>
                         </h3>
                     </div>
                     <div className="post__headerDescription">
-                        <p>I challenge you to build a Twitter Clone with ReactJS</p>
+                        <p>{text}</p>
                     </div>
                 </div>
-                <img src="https://media3.giphy.com/media/65ATdpi3clAdjomZ39/giphy.gif" alt="" />
+                <img src={image} alt="" />
                 <div className="post__footer">
                     <ChatBubbleOutlineIcon fontSize="small" />
                     <RepeatIcon fontSize="small" />
