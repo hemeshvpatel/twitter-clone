@@ -17,6 +17,10 @@ function Feed() {
         )
     }, []);
 
+    // Sort posts by timestamp key
+    var sortedPosts = posts.sort(function (a, b) { return b.fulldate - a.fulldate });
+    // console.log("Sorted Posts ---> ", sortedPosts)
+
     return (
         <div className="feed">
             {/* Header */}
@@ -29,9 +33,9 @@ function Feed() {
 
             {/* Posts */}
             <FlipMove>
-                {posts.reverse().map(post => (
+                {sortedPosts.map(post => (
                     <Post
-                        key={post.timestampKey}
+                        key={post.atimestampkey}
                         displayName={post.displayName}
                         username={post.username}
                         verified={post.verified}

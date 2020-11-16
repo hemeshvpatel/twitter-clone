@@ -16,12 +16,11 @@ const Post = forwardRef(({
     text,
     image,
     avatar,
-    timestamp,
     date }, ref) => {
     return (
         <div className="post" ref={ref}>
             <div className="post__avatar">
-                <Avatar alt="Dev" src={avatar} />
+                <Avatar alt="" src={avatar} />
             </div>
             <div className="post__body">
                 <div className="post__header">

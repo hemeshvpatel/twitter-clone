@@ -17,14 +17,15 @@ function TweetBox() {
 
         //send to firebase db
         db.collection('posts').add({
+            atimestampKey: timestamp,
             displayName: 'Twitter Guest',
             username: 'twitterguest',
             verified: true,
             text: tweetMessage,
             image: tweetImage,
-            avatar: 'http://cliparts101.com/files/367/63BA654AECB7FD26A32D08915C923030/avatar_nick.png',
+            avatar: 'https://png.pngtree.com/png-clipart/20190924/original/pngtree-businessman-user-avatar-free-vector-png-image_4827807.jpg',
             date: dateString,
-            timestampKey: timestamp
+            fulldate: date
         });
 
         //reset fields
@@ -36,7 +37,7 @@ function TweetBox() {
         <div className="tweetBox">
             <form>
                 <div className="tweetBox__input">
-                    <Avatar alt="Dev" src="http://cliparts101.com/files/367/63BA654AECB7FD26A32D08915C923030/avatar_nick.png" />
+                    <Avatar alt="Dev" src="https://png.pngtree.com/png-clipart/20190924/original/pngtree-businessman-user-avatar-free-vector-png-image_4827807.jpg" />
                     <input
                         onChange={e => setTweetMessage(e.target.value)}
                         value={tweetMessage}
