@@ -11,6 +11,9 @@ function TweetBox() {
     const sendTweet = e => {
         e.preventDefault();
 
+        var date = new Date();
+        var dateString = new Date().toDateString();
+
         //send to firebase db
         db.collection('posts').add({
             displayName: 'Twitter Guest',
@@ -18,7 +21,9 @@ function TweetBox() {
             verified: true,
             text: tweetMessage,
             image: tweetImage,
-            avatar: "http://cliparts101.com/files/367/63BA654AECB7FD26A32D08915C923030/avatar_nick.png"
+            avatar: 'http://cliparts101.com/files/367/63BA654AECB7FD26A32D08915C923030/avatar_nick.png',
+            date: dateString,
+            timestampKey: date
         });
 
         //reset fields

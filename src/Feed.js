@@ -31,13 +31,14 @@ function Feed() {
             <FlipMove>
                 {posts.map(post => (
                     <Post
-                        key={post.text}
+                        key={post.timestampKey}
                         displayName={post.displayName}
                         username={post.username}
                         verified={post.verified}
                         text={post.text}
                         avatar={post.avatar}
-                        image={post.image} />
+                        image={post.image}
+                        date={post.date} />
                 ))}
             </FlipMove>
         </div>

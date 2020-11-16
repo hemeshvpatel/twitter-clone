@@ -15,7 +15,9 @@ const Post = forwardRef(({
     verified,
     text,
     image,
-    avatar }, ref) => {
+    avatar,
+    timestamp,
+    date }, ref) => {
     return (
         <div className="post" ref={ref}>
             <div className="post__avatar">
@@ -25,7 +27,7 @@ const Post = forwardRef(({
                 <div className="post__header">
                     <div className="post__headerText">
                         <h3>
-                            {displayName} <span className="post__headerSpecial">{verified && <VerifiedUserIcon className="post__badge" />}@{username}</span>
+                            {displayName} <span className="post__headerSpecial">{verified && <VerifiedUserIcon className="post__badge" />}@{username} {date}</span>
                         </h3>
                     </div>
                     <div className="post__headerDescription">
