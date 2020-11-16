@@ -2,6 +2,7 @@ Twitter Clone
 Live Demo Link: https://twitter-clone-a690d.web.app/
 
 Front end created using HTML, CSS, Material UI, and React
+
 Back end created using Firebase
 
 Widgets on right side use 'react-twitter-embed' to pull live data from Twitter API
