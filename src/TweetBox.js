@@ -12,6 +12,7 @@ function TweetBox() {
         e.preventDefault();
 
         var date = new Date();
+        var timestamp = date.getTime();
         var dateString = new Date().toDateString();
 
         //send to firebase db
@@ -23,7 +24,7 @@ function TweetBox() {
             image: tweetImage,
             avatar: 'http://cliparts101.com/files/367/63BA654AECB7FD26A32D08915C923030/avatar_nick.png',
             date: dateString,
-            timestampKey: date
+            timestampKey: timestamp
         });
 
         //reset fields

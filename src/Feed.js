@@ -29,7 +29,7 @@ function Feed() {
 
             {/* Posts */}
             <FlipMove>
-                {posts.map(post => (
+                {posts.reverse().map(post => (
                     <Post
                         key={post.timestampKey}
                         displayName={post.displayName}
